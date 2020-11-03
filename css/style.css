@@ -37,11 +37,19 @@
     height: calc(100%/3);
     transform-style: preserve-3d;
     position: relative;
-    transform: rotateY(0deg);
+}
+
+.cube-1 {
+    transition: transform .4s;
 }
 
 .cube-2{
     z-index: 10;
+    transition: transform .4s .2s;
+}
+
+.cube-3 {
+    transition: transform .4s .4s;
 }
 
 .face{
@@ -129,11 +137,13 @@
 .top{
     height: 42vw;
     transform: translateY(-21vw) rotateX(90deg);
+    background-color: #000;
 }
 
 .bottom{
     height: 42vw;
     transform: translateY(-14vw) rotateX(-90deg);
+    background-color: #000;
 }
 
 .control{
@@ -150,10 +160,16 @@
     border-radius: 50%;
     cursor: pointer;
     z-index: 111;
+    transition: background-color .3s;
+
 }
 
 .control:hover{
     background-color: rgba(42, 38, 36, .8);
+}
+
+.control i{
+    pointer-events: none;
 }
 
 .left-arrow{
